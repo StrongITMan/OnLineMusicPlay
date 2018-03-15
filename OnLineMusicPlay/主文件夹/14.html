@@ -1,0 +1,126 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <title>音频控制进度条</title>
+    <!--<link href="../CSS文件夹/master.css" rel="stylesheet" />-->
+  <script src="../JavaScript文件夹/bottomflix.js"></script>
+    <style type="text/css">
+        body, p {
+            padding: 0;
+            margin: 0;
+        }
+        .m-music {
+            position:fixed;
+            bottom:2px;
+            float:left;
+            width:100%;
+            height: 55px;
+            /*margin: 3% auto;*/
+            text-align:center;
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+            .m-music video {
+                display: none;
+            }
+
+            .m-music .player {
+                width: 100%;
+                height: 50px;
+                position: relative;
+                bottom: 0px;
+            }
+                .m-music .player > a {
+                    display: inline-block;
+                    width: 20%;
+                    margin: 0 auto;
+                    padding: 5%;
+                    color: #FFF;
+                    text-align: center;
+                }
+            .m-music .play-box {
+                width: 100%;
+                margin: 0 auto;
+            }
+                .m-music .play-box .leftmusic {
+                    width: 100%;
+                    float: left;
+                }
+
+                    .m-music .play-box .leftmusic p.timeline {
+                        /*调节进度条高度和宽度*/
+                        width: 400px;
+                        height: 10px;
+                        /*line-height:10px;*/
+                        background-color: rgba(216, 216, 216, 0.5);
+                        border-radius: 5px;
+                        float:left;
+                        margin: 0px 0 0px 40px;
+                        position: relative;
+                        z-index: 2;
+                    }
+                        .m-music .play-box .leftmusic p.timeline span {
+                            /*进度条的圆点动态*/
+                            position: relative;
+                            width: 0px;
+                            height:10px;
+                            background-color: #f00;
+                            border-radius: 5px;
+                            display: block;
+                            -webkit-transition: width ease-out 0.3s;
+                            -o-transition: width ease-out 0.3s;
+                            transition: width ease-out 0.3s;
+                        }
+                            .m-music .play-box .leftmusic p.timeline span:after {
+                                content: "";
+                                position: absolute;
+                                top: -4px;
+                                right: -0.6rem;
+                                width: 1.2rem;
+                                height: 1.1rem;
+                                border-radius: 50%;
+                                background-color: #FFF;
+                            }
+               
+                    .span1{
+                        color:aliceblue;
+                        float:left;
+                        margin:32px 0 0 10px;
+                    }
+    </style>
+</head>
+<body>     
+        <div style="margin:0 0 0 0;padding:0px;position:relative;">
+            <div class="m-music">
+                <div class="player">
+                    <div class="play-box">
+                        <div class="leftmusic"><a style="margin:0px 0 0 0px;"></a>
+                            <img  src="../images/imagepang/bfzn_005.ico" style="float:left;width:30px;height:30px;border-radius:15px;margin:12px 0 0 200px;" />
+                            <img id="js-play" onclick="Playpause()"  src="../images/imagepang/bfzn_003.ico" style="float:left;width:40px;height:40px;border-radius:20px;margin:7px 0 0 5px;" />
+                            <a><img src="../images/imagepang/bfzn_007.ico" style="float:left;width:30px;height:30px;border-radius:15px;margin:12px 0 0 5px;" /></a> 
+                         <div style="float:left;margin:0 0 0 40px;padding:0px;width:400px;height:55px;">
+                             <span style="text-align:center;color:aliceblue;float:left; margin:5px 0 0px 0px;height:20px;width:400px;">我的世界</span>
+                             <br />
+                             <p class="timeline" style="margin:10px 0 0px 0px"><span style=""></span></p>
+                         </div>
+                            <span class="span1" id="size">00:00</span>&nbsp;
+                            <span class="span1" id="timeshow">00:00</span>
+                            <img src="../images/imagepang/favicon.ico" onclick="musicstop()" style="float:left;width:30px;height:30px;border-radius:15px;margin:15px 0 0 40px;" />
+                            <input id="range" type="range" min="0" max="100" value="5" onchange="change()" style="width:100px;height:20px;float:left;margin:20px 0 0 10px;">
+                            <span id="Mv1" style="margin:0 20px 5px 0;padding:0px;height:10px;float:left;margin:22px 0 0 10px;color:black;width:10px;">5</span>
+
+                            <img  src="../images/imagepang/Ramone.ico" style="float:left;width:40px;height:40px;border-radius:20px;margin:7px 0 0 20px;" />
+                            <img  src="../images/imagepang/Listmusic.ico" style="float:left;width:40px;height:40px;border-radius:20px;margin:7px 0 0 20px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <audio hidden="hidden" controls="controls" autoplay="autoplay" id="js-video"><source src="../Audio/C418 - Stal.mp3" /></audio>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+    

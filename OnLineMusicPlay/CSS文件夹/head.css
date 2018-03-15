@@ -1,0 +1,103 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0px;
+    background-color: #f0f0f0;
+}
+.auto-style2 {
+    height: 2px;
+    width: 100%;
+}
+div {
+    margin: 0 0 0 0;
+    padding: 0px;
+}
+.div_hand {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0px;
+}
+ .div_list {
+        background-color: rgb(128, 128, 128);
+        width: 100%;
+        height: 73px;
+        align-content: center;
+        margin: 0 0 0 0;
+        padding: 0px;
+    }
+.ul_list {
+    float: left;
+    margin: 0 0 0 0;
+    padding: 0px;
+    text-align: center;
+}
+.li1 {
+        float: left;
+        color: black;
+        list-style: none;
+        margin: 0px 0px 0px 0;
+        padding: 18px 18px;
+        font-weight: 700;
+        font-size: 25px;
+        font-family: 楷书;
+    }
+.li1:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(0, 35, 122, 0.7);
+}
+.linkworld {
+    color: black;
+}
+
+.div_backtop {
+    position: fixed;
+    display: none;
+    top: 450px;
+    float: right;
+    right: 6%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+.div_backtop a {
+        text-decoration: none;
+        color: rgba(0, 38, 255, 0.71);
+        margin: 10px 0 0 0;
+    }
+.div_content{
+    width:100%;
+    height:90%;
+    margin:0 0 0 0;
+    padding:0px;
+}
+.div_last{
+   text-align: center; 
+   float: left;
+   font-family: 楷书; 
+   font-size: 16px; 
+   height:120px; 
+   width: 100%;
+   display:table-cell;
+   vertical-align:middle;
+}
+.div_last hr{
+    background-color: black;
+}
+a {
+    text-decoration: none;
+
+}
+
+/*input {
+    font-weight: 600;
+    font-size: 17px;
+    float: left;
+    margin: 20px 0px 0px 10px;
+    padding: 8px;
+}*/
+       

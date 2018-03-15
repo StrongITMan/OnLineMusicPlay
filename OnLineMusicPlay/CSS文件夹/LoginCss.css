@@ -1,0 +1,61 @@
+﻿.div_login1{
+    margin:50px 0 0 0;
+    padding:0px;
+    width:100%;
+    height:600px;
+}
+.span_font{
+    font-size:40px;
+    color:black;
+    font-family:行楷;
+    margin:0 0 0 150px;
+}
+.hr_login{
+    height:10px;
+    background-color:blue;
+    width:80%;
+}
+.div_login2{
+    width:100%;
+    height:300px;
+    text-align:center;
+    font-size:24px;
+    padding:30px;
+}
+.txt_login{
+    width:200px;
+    height:30px;
+    border:1px solid #808080;
+    color:#000000;
+}
+.Btn_login{
+    width:80px;
+    height:40px;
+    font-size:20px;
+   font-weight:500;
+   text-align:center;
+   margin:20px 0 0 90px;
+   color:black;
+}
+.div_Regist1{
+    width:100%;
+    height:500px;
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+}
+.txt_Regist{
+    width:180px;
+    height:30px;
+    border:1px solid #808080;
+    color:#000000;
+}
+.Btn_regist{
+    width:70px;
+    height:35px;
+    font-size:20px;
+    font-weight:500;
+    text-align:center;
+    color:black;
+    margin:0 0 0 20px;
+}

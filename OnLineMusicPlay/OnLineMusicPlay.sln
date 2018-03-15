@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "OnLineMusicPlay", "D:\学习软件\Web前端开发\项目\OnLineMusicPlay\", "{4686A791-303D-4967-B68B-61082CAB97C9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		ProjectReferences = "{f313159f-9795-4e16-91f3-423f0a02cda8}|BLL.dll;{98F1CE20-7073-4720-834C-885A34DD9B0B}|DAL.dll;{4977A3DE-92DA-4807-9910-836952BB9EA3}|Model.dll;{2EB54F23-E1F9-410A-89A1-235BA1B355FA}|Rule.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50571"
+		Debug.AspNetCompiler.PhysicalPath = "D:\学习软件\Web前端开发\项目\OnLineMusicPlay\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50571\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50571"
+		Release.AspNetCompiler.PhysicalPath = "D:\学习软件\Web前端开发\项目\OnLineMusicPlay\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50571\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50571"
+		SlnRelativePath = "D:\学习软件\Web前端开发\项目\OnLineMusicPlay\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{4977A3DE-92DA-4807-9910-836952BB9EA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{98F1CE20-7073-4720-834C-885A34DD9B0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F313159F-9795-4E16-91F3-423F0A02CDA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rule", "Rule\Rule.csproj", "{2EB54F23-E1F9-410A-89A1-235BA1B355FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4686A791-303D-4967-B68B-61082CAB97C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4686A791-303D-4967-B68B-61082CAB97C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4686A791-303D-4967-B68B-61082CAB97C9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4686A791-303D-4967-B68B-61082CAB97C9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4977A3DE-92DA-4807-9910-836952BB9EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4977A3DE-92DA-4807-9910-836952BB9EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4977A3DE-92DA-4807-9910-836952BB9EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4977A3DE-92DA-4807-9910-836952BB9EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F1CE20-7073-4720-834C-885A34DD9B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F1CE20-7073-4720-834C-885A34DD9B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F1CE20-7073-4720-834C-885A34DD9B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F1CE20-7073-4720-834C-885A34DD9B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F313159F-9795-4E16-91F3-423F0A02CDA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F313159F-9795-4E16-91F3-423F0A02CDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F313159F-9795-4E16-91F3-423F0A02CDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F313159F-9795-4E16-91F3-423F0A02CDA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB54F23-E1F9-410A-89A1-235BA1B355FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB54F23-E1F9-410A-89A1-235BA1B355FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB54F23-E1F9-410A-89A1-235BA1B355FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB54F23-E1F9-410A-89A1-235BA1B355FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

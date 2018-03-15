@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5响应式全屏宽度幻灯片特效 - xw素材网</title>
+    <link href="../CSS文件夹/play1.css" rel="stylesheet" />
+
+    <!--<script src="../Scripts/jquery-1.10.2.js"></script>-->
+</head>
+<body>
+    <div class="hsldr-container">
+        <ul>
+            <li>
+                <img src="../images/photo-1415769663272-8504c6cc02b3.jpg" />
+                <div class="caption">This is a caption</div>
+            </li>
+            <li>
+                <img src="../images/photo-1418662589339-364ad47f98a2.jpg" />
+                <div class="caption">This is another caption</div>
+            </li>
+            <li>
+                <img src="../images/photo-1423483786645-576de98dcbed.jpg" />
+                <div class="caption">This is one more caption</div>
+            </li>
+            <li>
+                <img src="../images/photo-1428069940893-209d71f133cf.jpg" />
+                <div class="caption">This is one more caption</div>
+            </li>
+            <li>
+                <img src="../images/photo-1428471226620-c2698eadf413.jpg" />
+                <div class="caption">This is one more caption</div>
+            </li>
+            <li>
+                <img src="../images/photo-1428471226620-c2698eadf413.jpg" />
+                <div class="caption">This is one more caption</div>
+            </li>
+        </ul>
+    </div>
+    <script src="../JavaScript文件夹/play1.js"></script>
+    <script src="../JavaScript文件夹/play2.js"></script>
+    <script src="../JavaScript文件夹/play3.js"></script>
+
+    <script type="text/javascript">
+
+	$( document ).ready(function() {
+		$( ".hsldr-container" ).hslider({
+		  navBar: true,
+		  auto: true,
+		  delay: 4000
+		});
+	});
+    </script>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <style>
+        .span_listmusic{
+                height:30px;
+                float:left;
+                text-align:left;
+                font-size:20px;
+                font-family:行楷;
+            }
+        .div_music_list{
+            margin:10px 0 0 0px;
+            width:100%;
+            height:60px;
+        }
+         .div_music_list:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+                background: rgba(0, 0, 0, 0.1);
+                color: rgba(0, 0, 0, 0.84);
+            }
+            .div_music_list img{
+                width:60px;
+                height:60px;
+                margin:0px 10px 0 50px;
+                float:left;
+            }
+    </style>
+    <div id="div_AlubmaMusic" style="width:100%;height:834px;margin:0 0 0 0;padding:0px;">
+        <div class='div_music_list' id='divdisplay'><img src='../images/imagepang/sender_2.jpg' /><span class='span_listmusic'>喜欢的歌曲</span><br /><br /><span class='span_listmusic'>000</span><b style='font-size:30px;margin:0px;padding:0px;float:left;top:0px;'>♪</b></div>
+        <div class='div_music_list' id='divdisplay'><img src='../images/imagepang/sender_2.jpg' /><span class='span_listmusic'>喜欢的歌曲</span><br /><br /><span class='span_listmusic'>000</span><b style='font-size:30px;margin:0px;padding:0px;float:left;top:0px;'>♪</b></div>
+        <div class='div_music_list' id='divdisplay'><img src='../images/imagepang/sender_2.jpg' /><span class='span_listmusic'>喜欢的歌曲</span><br /><br /><span class='span_listmusic'>000</span><b style='font-size:30px;margin:0px;padding:0px;float:left;top:0px;'>♪</b></div>
+        <div class='div_music_list' id='divdisplay'><img src='../images/imagepang/sender_2.jpg' /><span class='span_listmusic'>喜欢的歌曲</span><br /><br /><span class='span_listmusic'>000</span><b style='font-size:30px;margin:0px;padding:0px;float:left;top:0px;'>♪</b></div>
+        <input type="password"/>
+    </div>
+    </body>
+</html>

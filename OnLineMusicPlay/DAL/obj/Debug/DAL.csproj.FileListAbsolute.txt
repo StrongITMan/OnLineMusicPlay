@@ -1,0 +1,14 @@
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\bin\Debug\DAL.dll
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\bin\Debug\DAL.pdb
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\bin\Debug\Model.dll
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\bin\Debug\Model.pdb
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\obj\Debug\DAL.dll
+E:\学习文档\个人项目\项目\OnLineMusicPlay\DAL\obj\Debug\DAL.pdb
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\bin\Debug\DAL.dll
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\bin\Debug\DAL.pdb
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\bin\Debug\Model.dll
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\bin\Debug\Model.pdb
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\obj\Debug\DAL.dll
+D:\学习软件\Web前端开发\项目\OnLineMusicPlay\DAL\obj\Debug\DAL.pdb

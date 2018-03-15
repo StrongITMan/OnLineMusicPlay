@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#"
+     AutoEventWireup="true" 
+    CodeFile="FristMusic.master.cs" 
+    Inherits="主文件夹_FristMusic" %>
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>听风音乐</title>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+     
+    <link href="../CSS文件夹/head.css" rel="stylesheet" /> <!--导航栏样式-->
+    <link href="../CSS文件夹/backlast.css" rel="stylesheet" />
+    <script src="../JavaScript文件夹/bottomflix.js"></script>  
+    
+                    <script src="../Scripts/jquery-1.10.2.js"></script>
+                     <script type="text/javascript"  src="../JavaScript文件夹/searchBox.js"></script>
+                     <%--<link rel="stylesheet" type="text/css" href="../CSS文件夹/SearchBox.css"> <!--搜索框的样式-->--%>
+</head>
+<body onscroll="backtop()" style="width:100%;height:100%;margin:0 0 0 0;padding:0px;">
+    <form runat="server" id="fristmaster">
+    <div class="div_hand">
+        <a name="backtop"></a> <!-- “回到顶部”控件的链接地点-->    
+        <div class="div_list" ><!--导航栏-->
+             <ul class="ul_list">
+                <li class="li1" style="margin:0 0 0 0;padding:0px;">
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/主文件夹/Default.aspx"><b style="color:black;font-size:55px;font-weight:600;font-family:隶书;">听♪风</b></asp:HyperLink>
+                </li>
+                <li class="li1">
+                    <asp:HyperLink ID="Mymusicworld"  runat="server"  CssClass="linkworld">我的音乐</asp:HyperLink>          
+                <li class="li1">
+                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="linkworld">发现音乐</asp:HyperLink>
+                </li>
+                <li class="li1">
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="linkworld">观看Mv</asp:HyperLink>
+                </li>
+                <li class="li1">
+                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="linkworld">下载</asp:HyperLink>
+                </li>
+                <li class="li1">
+                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="linkworld" NavigateUrl="~/主文件夹/login.aspx">登录</asp:HyperLink>
+                </li>
+            </ul>       
+                     <div style="padding:0px; margin:0 0 0 0;float:right;">
+                            <input type="text" class="input1" placeholder="请输入关键词" autofocus="autofocus" style="color: blueviolet;" />
+                            <input type="button"  style="font-size: 1.08em;margin:15px 20px 0 0;border-radius:10px;width:50px;height:35px;" value="搜索" />
+                     </div>
+        </div>
+        <div id="homehide" class="div_backtop" >  <!--“返回顶部”-->             
+             <a href="#backtop"><b>△<br />Go</b></a>
+        </div>
+        <div >
+            <div class="div_content" >
+              <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+               </asp:ContentPlaceHolder>
+             </div>
+            
+          </div>
+         <div class="div_last"> <!--页尾信息-->
+                    <hr class="auto-style2" />
+                     <br />
+                    <a href="About.html" >关于我们</a>| 
+                    <a href="https://www.baidu2.com" >客户服务</a>|
+                    <a href="https://www.baidu3.com" >服务条款</a>|
+                    <a href="https://www.baidu4.com" >意见反馈</a>
+                    <br />
+                    <a href="https://www.gd-nf.com.cn" >南方IT学院</a>&nbsp;版权所有&copy;1997-2018 South Vocational College.All Rights Reserved.
+              </div>
+        <%--页面底部悬浮框--%>
+    
+        <div class="divFixed">
+            <div class="m-music">
+                <div class="player">
+                    <div class="play-box">
+                        <div class="leftmusic">
+                            <img  src="../images/imagepang/bfzn_005.ico" class="imgflix1" />
+                            <img id="js-play" onclick="Playpause()"  src="../images/imagepang/bfzn_004.ico" class="imgflix2" />
+                            <a><img src="../images/imagepang/bfzn_007.ico"  class="imgflix3"/></a> 
+                            <div class="div_long">
+                              <span class="span_long">我的世界</span>
+                              <br />
+                              <p class="timeline" style="margin:10px 0 0px 0px;margin:0 0 0 0;padding:0px;"><span style=""></span></p>
+                            </div>
+                            <span class="spantime" id="sizetime">00:00</span>&nbsp;
+                            <span class="spantime" id="timeshowtime">00:00</span>
+                            <img src="../images/imagepang/favicon.ico"  onclick="musicstop()" class="imgflix4"/>
+                            <input id="range" type="range" min="0" max="100" value="5" onchange="change()"  class="inputvomule">
+                            <span id="Mv1" class="spanM" >5</span>
+
+                            <img  src="../images/imagepang/Ramone.ico" class="imgflix5" />
+                            <img  src="../images/imagepang/Listmusic.ico"  class="imgflix6"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <audio hidden="hidden" controls="controls" id="js-video"><source src="../Audio/C418 - Stal.mp3" /></audio>
+                </div>
+            </div>
+        </div>
+     </div>
+  </form>
+</body>
+</html>
+
+        
+            
