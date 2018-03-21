@@ -36,5 +36,10 @@ namespace Model
             this.Listeners = listeners;
             this.ImageUrl = imageurl;
         }
+        public Albummusic(string albumname,int Albumid)
+        {
+            this.AlbumName = albumname;
+            this.AlbumID = Albumid;
+        }
     }
 }

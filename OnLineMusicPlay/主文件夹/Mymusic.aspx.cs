@@ -13,20 +13,34 @@ public partial class 主文件夹_Default2 : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Logins"] != null)
-        {
-            Model.CustomerMusic xw = (Model.CustomerMusic)Session["Logins"];
-            name.Text = xw.UserName;
-            phone.Text = "登录账户:" + xw.Phone;
-            email.Text = "电子邮箱:" + xw.Email;
-            last.Text = "最近登录:" + xw.LastLoginTime;
-            Image1.ImageUrl = "../images/gradeimg/" + xw.RankName + ".jpg";
-        }
-        else
-        {
-            Response.Redirect("login.aspx");
-        }
-    }
+            {
+                Model.CustomerMusic xw = (Model.CustomerMusic)Session["Logins"];
+                name.Text = xw.UserName;
+                phone.Text = "登录账户:" + xw.Phone;
+                email.Text = "电子邮箱:" + xw.Email;
+                last.Text = "最近登录:" + xw.LastLoginTime;
+                Image1.ImageUrl = "../images/gradeimg/" + xw.RankName + ".jpg";
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
 
+        if (!IsPostBack)
+        {
+            DrodList();
+        }
+        
+    }
+    public void DrodList()
+    {
+        List<Model.Albummusic> cs = new List<Model.Albummusic>();
+        cs = new BLL.AlbummusicBLL().SelectDropList(((Model.CustomerMusic)Session["Logins"]).ID);
+        this.DropDownList1.DataSource = cs;
+        this.DropDownList1.DataTextField = "AlbumName";
+        this.DropDownList1.DataValueField = "AlbumID";
+        this.DropDownList1.DataBind();
+    }
     protected void Newlist_Click(object sender, EventArgs e)
     {
         //if(txtAubm.Text==null||txtAubm.Text=="")
@@ -58,6 +72,7 @@ public partial class 主文件夹_Default2 : System.Web.UI.Page
 
     protected void btn_upload_Click(object sender, EventArgs e)
     {
+         string imgurls="";
         Boolean fileOk = false;
         if (pic_upload.HasFile)//验证是否包含文件
         {
@@ -80,27 +95,46 @@ public partial class 主文件夹_Default2 : System.Web.UI.Page
                     string mappath = Server.MapPath(virpath);//转换成服务器上的物理路径
                     pic_upload.PostedFile.SaveAs(mappath);//保存图片
                                                           //显示图片
-                    pic.ImageUrl = virpath;
+                    //pic.ImageUrl = virpath;
                     //清空提示
                     lbl_pic.Text = "";
+                    imgurls = virpath;
                 }
                 else
                 {
-                    pic.ImageUrl = "";
+                    //pic.ImageUrl = "";
                     lbl_pic.Text = "文件大小超出8M！请重新选择！";
                 }
             }
             else
             {
-                pic.ImageUrl = "";
+                //pic.ImageUrl = "";
                 lbl_pic.Text = "要上传的文件类型不对！请重新选择！";
             }
         }
         else
         {
-            pic.ImageUrl = "";
+            //pic.ImageUrl = "";
             lbl_pic.Text = "请选择要上传的图片！";
+        }
 
+        //修改歌单背景图片
+        int id =int.Parse( DropDownList1.SelectedValue);
+        if(imgurls!="")
+        {
+            int updateimg = new BLL.AlbummusicBLL().UpdateAlbu(imgurls,id);
+            if(updateimg>0)
+            {
+                lbl_pic.Text = "更改成功!";
+            }
+            else
+            {
+                lbl_pic.Text = "更改失败!";
+            }
+        }
+        else
+        {
+            lbl_pic.Text = "请重新选择图片!";
         }
     }
     /// <summary>

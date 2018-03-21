@@ -39,10 +39,15 @@ function ListMusic()
         }
     });
 }
-//歌单背景图片
-function ImageBackground()
+//打开歌单封面更改界面
+function opfileClick()
 {
-
+    $("#divFile").show(1000);
+}
+//关闭歌单封面更改界面
+function Closeclick()
+{
+    $("#divFile").hide();
 }
 //新建列表
 function ListMusic_click() {

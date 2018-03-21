@@ -103,7 +103,8 @@
     <div style="width: 74.5%; height:100%; top:0px; margin:0px 0 0 0;padding:0px;float:left;background-color:rgba(0, 0, 0, 0.16);">
         <div style="width:100%;height:100%;margin:10px 0 0 0;padding:0px;">
             <span style="font-size:24px;color:white;margin:0 0 0 10px;float:left;">歌曲列表</span>
-            <input id="openFile" type="button" style="font-size:16px;float:right;margin:0 10px 0 0" value="更改封面" onclick="opfileClick()"/>
+            <input id="deletmusicList" type="button" style="font-size:16px;float:right;margin:5px 10px 0 0" value="删除歌单" onclick=""/>
+            <input id="openFile" type="button" style="font-size:16px;float:right;margin:5px 10px 0 0" value="更改封面" onclick="opfileClick()"/>
             <br /><br />
             <hr />
             <div id='Div_Music_show' style="width:100%;height:980px;margin:0 0 0 0;padding:0px;">
@@ -122,28 +123,19 @@
         </div>
     </div>
 </div>
-    <div id="divFile" style="display:none;width:600px;height:400px;border:1px solid red;position:fixed;left:30%;top:20%;background-color:gray;">
+    <div id="divFile" style="display:none;width:500px;height:300px;border:1px solid red;position:fixed;left:35%;top:20%;background-color:gray;">
         <div style="width:100%;height:30px;background-color:rgba(0, 0, 0, 0.74);color:rgba(255, 255, 255, 0.6);border-bottom:2px solid black;">
-            <label style="float:left;margin-left:20px;">上传</label><a href="#" onclick="Closeclick()" style="float:right;font-size:20px;margin-right:20px;">×</a>
+            <label style="float:left;margin-left:20px;margin-top:5px;">上传</label><a href="#" onclick="Closeclick()"  style="float:right;font-size:20px;margin-right:20px;">×</a>
         </div>
         <div style="text-align:center;margin:auto;">
-                <asp:Image ID="pic" runat="server" Style="width:240px;height:240px;margin:20px 0 0 0;" /><br />
-                <asp:FileUpload ID="pic_upload" runat="server" /><asp:Label ID="lbl_pic" runat="server"  Style="margin:20px 0 10px 0;font-size:15px;"></asp:Label><br />
+                <%--<asp:Image ID="pic" runat="server" Style="width:240px;height:210px;margin:20px 0 0 0;" /><br />--%>
+              <br /><br /> <asp:Label ID="lbl_pic" runat="server"  Style="margin:20px 0 10px 0;font-size:15px;color:blue;"></asp:Label><br />
+            <br /><asp:FileUpload ID="pic_upload" runat="server"  /><br /><br />
                  上传图片格式为.jpg, .gif, .bmp,.png,图片大小不得超过8M<br />
-                <asp:Button ID="btn_upload" runat="server" Text="上传" Style="margin:20px 0 0 0;font-size:16px;"  onclick="btn_upload_Click"/>
+            <asp:DropDownList ID="DropDownList1" runat="server" style="width:200px;height:20px;"></asp:DropDownList>
+                <asp:Button  runat="server"   Text="上传" Style="margin:20px 0 0 20px;font-size:16px;"  OnClick="btn_upload_Click"/>
+                 <%--<input type="button" ID="btn_upload" value="上传" style="margin:20px 0 0 20px;font-size:16px;"  onclick="btn_upload_Click()"/>--%>
         </div>
     </div>
-     
-    <script>
-        //打开歌单封面更改界面
-        function opfileClick()
-        {
-            $("#divFile").show(1000);
-        }
-        function Closeclick()
-        {
-            $("#divFile").hide();
-        }
-    </script>
 </asp:Content>
 

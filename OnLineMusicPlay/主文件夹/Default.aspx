@@ -6,6 +6,7 @@
      Inherits="主文件夹_Default" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <link href="../CSS文件夹/play1.css" rel="stylesheet" />
+    <script src="../JavaScript文件夹/DefaultJava.js"></script>
     <div style="width:100%;height:90%;padding:0px;margin:0 0 0 0;">
         <div class="hsldr-container" >
             <ul >
@@ -38,25 +39,18 @@
         </script>
         
        <div style="width: 70%; height:1000px; margin: 0 15% 0 15%; border: 1px solid green;padding:0px;">
-           <div style="position:relative;width:100%;height:50px;background-color:burlywood;border:1px solid gray;text-align:left;">
-            <span style="font-size:24px;font-family:行楷;margin:5px 5px 0 10px;padding:0px;">热门推荐</span>
-            <a style="font-family:行楷;margin:0 10px 0 10px;">华语</a>|
-            <a style="font-family:行楷;margin:0 10px 0 10px;">流行</a>|
-            <a style="font-family:行楷;margin:0 10px 0 10px;">摇滚</a>|
-            <a style="font-family:行楷;margin:0 10px 0 10px;">民乐</a>|
-            <a style="font-family:行楷;margin:0 10px 0 10px;">电子</a>|
-            <hr style="height:4px;background-color:red"/>
-        </div>
-             <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="4" Width="70%" >
-                <ItemTemplate>
-                            <div style="position:relative;width:200px;height:200px;float:left;margin:10px 5px 0 15px">
-                                <img src="../images/photo-1431036101494-66a36de47def.jpg" alt="" style="width:200px;height:200px;" />
-                                <span style="position:absolute;bottom:0 ;left:0;width:200px;height:40px;background-color:rgba(255, 255, 255, 0.60);border-top:2px double black;">
-                                  <label style="font-size:20px;color:deepskyblue;margin:4px 3px 0 30px;float:left;">1235</label><label style="font-size:25px;margin:0 10px 0 0;padding:0px;float:left;">♪</label><img style="height:30px;width:30px;border-radius:15px;margin:5px 0 0 20px;" src="../images/imagepang/like.png" />
-                                </span>
-                            </div>
-                </ItemTemplate>
-       </asp:DataList>
+            <div style="position:relative;width:100%;height:50px;background-color:burlywood;border:1px solid gray;text-align:left;float:left;">
+                <span style="font-size:24px;font-family:行楷;margin:5px 5px 0 10px;padding:0px;">热门推荐</span>
+                <a style="font-family:行楷;margin:0 10px 0 10px;">华语</a>|
+                <a style="font-family:行楷;margin:0 10px 0 10px;">流行</a>|
+                <a style="font-family:行楷;margin:0 10px 0 10px;">摇滚</a>|
+                <a style="font-family:行楷;margin:0 10px 0 10px;">民乐</a>|
+                <a style="font-family:行楷;margin:0 10px 0 10px;">电子</a>|
+                <hr style="height:4px;background-color:red"/>
+            </div>
+           <div id="Div_showList_1" style="width:100%;padding:0px;margin:0px;">
+          
+           </div>
        </div>
    </div>
 </asp:Content>

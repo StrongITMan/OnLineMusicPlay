@@ -7,4 +7,3 @@ D:\学习软件\Web前端开发\项目\OnLineMusicPlay\Model\bin\Debug\Model.dll
 D:\学习软件\Web前端开发\项目\OnLineMusicPlay\Model\bin\Debug\Model.pdb
 D:\学习软件\Web前端开发\项目\OnLineMusicPlay\Model\obj\Debug\Model.dll
 D:\学习软件\Web前端开发\项目\OnLineMusicPlay\Model\obj\Debug\Model.pdb
-D:\学习软件\Web前端开发\项目\OnLineMusicPlay\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

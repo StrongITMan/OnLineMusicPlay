@@ -27,12 +27,42 @@ namespace DAL
         public List<Model.Albummusic> SelectAlbu(int x)
         {
             List<Model.Albummusic> cs = new List<Model.Albummusic>();
-            string sql = "select * from Albummusic where ID=" + x + "";
+            string sql = "";
+            if(x==-1)
+            {
+                 sql = "select * from Albummusic";
+            }
+            else
+            {
+                 sql = "select * from Albummusic where ID=" + x + "";
+            }
+            
             SqlDataReader dr = Dbhelper.ExecReader(sql);
             if (dr != null)
             {
                 while (dr.Read())
                     cs.Add(new Model.Albummusic((int)dr["AlbumID"], dr["AlbumName"].ToString(), dr["Albumabstract"].ToString(), (int)dr["ID"], dr["AlbuTime"].ToString(), (int)dr["Listeners"], dr["ImageUrl"].ToString()));
+
+                dr.Close();
+            }
+
+            return cs;
+        }
+
+        /// <summary>
+        /// 下拉框绑定数据源
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public List<Model.Albummusic> SelectDropList(int x)
+        {
+            List<Model.Albummusic> cs = new List<Model.Albummusic>();
+            string sql = "select [AlbumID],[AlbumName] from Albummusic where ID=" + x + "";
+            SqlDataReader dr = Dbhelper.ExecReader(sql);
+            if (dr != null)
+            {
+                while (dr.Read())
+                    cs.Add(new Model.Albummusic(dr["AlbumName"].ToString(),(int)dr["AlbumID"]));
 
                 dr.Close();
             }
